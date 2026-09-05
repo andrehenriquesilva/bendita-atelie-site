@@ -65,7 +65,9 @@
   if (T.cta) {
     bloco.push(T.ctaTipo === 'seta'
       ? `<div class="seta">${T.cta}</div>`
-      : `<span class="cta-wpp">${T.cta}</span>`);
+      : T.ctaTipo === 'linha'
+        ? `<span class="cta-linha">${T.cta} &rarr;</span>`   // contorno dourado: tom executivo, sem verde
+        : `<span class="cta-wpp">${T.cta}</span>`);
   }
 
   alvo.innerHTML = bloco.join('\n');

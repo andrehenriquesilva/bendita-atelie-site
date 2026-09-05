@@ -15,7 +15,7 @@ window.POST = {
   ancora: "baixo",
 
   // --- TEXTO ---
-  eyebrow: "Viagens corporativas",
+  eyebrow: "",                   // o rodape ja assina "viagens corporativas" — repetir tirava 90px do titulo
   titulo: "Sua empresa ainda<br><em>perde tempo</em><br>cuidando de viagens?",
 
   frases: [
@@ -25,5 +25,8 @@ window.POST = {
 
   rodape: { marca: "Bendita Tour", linha: "Gestão inteligente de viagens corporativas" },
 
-  sub: "", itens: [], cta: "", marca: true, telas: []
+  // CTA proposto pelo conselho (a peca perguntava e nao dava saida) — a Josi pode vetar
+  cta: "Fale com um especialista", ctaTipo: "linha",
+
+  sub: "", itens: [], marca: true, telas: []
 };

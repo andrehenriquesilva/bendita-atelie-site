@@ -87,40 +87,59 @@ html,body{background:#07151a;min-height:100vh;display:flex;justify-content:cente
   font-size:26px;font-weight:800;letter-spacing:2px;border-radius:999px;padding:12px 26px;backdrop-filter:blur(6px)}
 
 /* ============================================================
-   TRATAMENTO `editorial` — exclusivo desta peça (B-033).
-   Público executivo: foto em faixa no topo, painel escuro embaixo,
-   tipografia grande com respiro e assinatura discreta no rodapé.
-   Sem lista de check e sem botão verde: sobriedade vende aqui.
+   TRATAMENTO `editorial` — exclusivo desta peca (B-033).
+   Publico executivo. Revisado pelo conselho do atelie em 05/09/2026:
+   foto full-bleed (blazer e notebook entram como massa atras do texto,
+   e some o corte no pescoco), rodape alinhado a esquerda com o resto,
+   titulo maior que a mancha do corpo, duas frases com uma voz so,
+   ritmo vertical em escala e um CTA sobrio de contorno dourado.
    ============================================================ */
-.trat-editorial{background:var(--navy)}
-.trat-editorial .foto{height:42%;bottom:auto;object-position:center 12%}
-.trat-editorial .veu{background:
-  linear-gradient(0deg,var(--navy) 0%,var(--navy) 58%,rgba(20,50,59,.88) 40%,rgba(20,50,59,.30) 32%,rgba(20,50,59,0) 22%)}
-/* fio dourado marcando onde a foto vira painel */
-.trat-editorial::after{content:"";position:absolute;left:0;right:0;top:42%;height:2px;z-index:3;
-  background:linear-gradient(90deg,rgba(242,183,5,0) 0%,rgba(242,183,5,.85) 18%,rgba(242,183,5,.85) 82%,rgba(242,183,5,0) 100%)}
+.trat-editorial{--dobra:52%;background:var(--navy)}
 
-.trat-editorial .conteudo{padding:var(--pad-topo) 86px 172px;justify-content:flex-end}
-.trat-editorial .eyebrow{font-size:21px;letter-spacing:6px;color:var(--sun);opacity:.95}
-.trat-editorial .titulo{font-size:74px;line-height:1.06;margin-top:26px;font-weight:700;
+/* a foto ocupa a arte inteira; quem cria o "painel" e o veu */
+.trat-editorial .foto{height:100%;bottom:0;object-position:center 12%;
+  /* sobe e aproxima o retrato: sem isso o queixo dela encostava na primeira linha do titulo */
+  transform:scale(1.12);transform-origin:50% 100%;
+  filter:saturate(.94) brightness(1.07)}   /* cala a placa ambar do fundo, que competia com o dourado */
+
+/* paradas em ORDEM (a versao anterior tinha 58% antes de 40% — o navegador
+   grampeava tudo e o "degrade" era um corte seco por acidente) */
+.trat-editorial .veu{background:linear-gradient(0deg,
+  rgba(14,30,36,.97) 0%,
+  rgba(14,30,36,.97) 50%,
+  rgba(20,50,59,.80) 58%,
+  rgba(20,50,59,.22) 66%,
+  rgba(20,50,59,0)   73%)}
+
+/* sem fio de dobra: com a foto full-bleed ele virava um risco atravessando o titulo */
+
+.trat-editorial .conteudo{padding:var(--pad-topo) 88px 190px;justify-content:flex-end}
+
+/* titulo: o elemento mais largo da peca — headline nao pode ser mais estreita que o corpo */
+.trat-editorial .titulo{font-size:82px;line-height:1.04;margin-top:0;font-weight:700;
   letter-spacing:-.5px;text-shadow:none}
 .trat-editorial .titulo em{color:var(--sun)}
 
-.trat-editorial .frases{margin-top:44px;display:flex;flex-direction:column;gap:30px}
-.trat-editorial .frases p{margin:0;padding-left:28px;border-left:3px solid rgba(242,183,5,.75);
-  font-size:33px;font-weight:500;line-height:1.42;color:#E8F2F2}
-.trat-editorial .frases p + p{font-size:29px;font-weight:400;color:#C9DCDD;border-left-color:rgba(224,242,242,.35)}
+/* as duas frases sao UM bloco, com um unico fio: a diferenca entre elas e so de cor */
+.trat-editorial .frases{margin-top:78px;display:flex;flex-direction:column;gap:26px;
+  border-left:3px solid rgba(242,183,5,.8);padding-left:30px}
+.trat-editorial .frases p{margin:0;font-size:31px;font-weight:500;line-height:1.45;color:#E4EFEF}
+.trat-editorial .frases p + p{color:#C7DADB}
 
-/* rodapé assinado */
-.rodape{position:absolute;left:0;right:0;bottom:0;z-index:4;height:112px;
-  display:flex;align-items:center;justify-content:center;gap:22px;
-  background:rgba(7,21,26,.55);border-top:1px solid rgba(224,242,242,.18);
-  padding:0 40px;text-align:center;white-space:nowrap}
-.rodape .nome{font-family:var(--font-base);font-weight:800;font-size:22px;letter-spacing:4px;
-  text-transform:uppercase;color:var(--paper);white-space:nowrap}
-.rodape .barra{width:1px;height:28px;background:rgba(242,183,5,.9);flex:0 0 auto}
-.rodape .linha{font-size:19px;font-weight:600;letter-spacing:2.6px;text-transform:uppercase;
-  color:var(--teal-light);opacity:.92;white-space:nowrap}
+/* CTA executivo: contorno dourado. Verde e so do WhatsApp e quebraria o tom aqui */
+.trat-editorial .cta-linha{display:inline-block;margin-top:52px;align-self:flex-start;
+  border:2px solid rgba(242,183,5,.9);border-radius:999px;padding:18px 36px;
+  font-size:26px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--sun)}
 
-/* a marca redonda fica sobre a foto, no alto */
+/* rodape assinado — alinhado a esquerda, na MESMA coluna do texto (88px) */
+.rodape{position:absolute;left:0;right:0;bottom:0;z-index:4;height:126px;
+  display:flex;align-items:center;justify-content:flex-start;gap:22px;
+  background:#0A1B21;border-top:1px solid rgba(224,242,242,.14);
+  padding:0 88px;white-space:nowrap}
+.rodape .nome{font-family:var(--font-base);font-weight:800;font-size:24px;letter-spacing:3.6px;
+  text-transform:uppercase;color:var(--paper)}
+.rodape .barra{width:1px;height:26px;background:rgba(242,183,5,.75);flex:0 0 auto}
+.rodape .linha{font-size:19px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;
+  color:var(--teal-light)}
+
 .trat-editorial .marca{width:104px;height:104px}
