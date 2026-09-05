@@ -109,6 +109,9 @@ isso `--pad-topo`/`--pad-baixo` maiores no 9:16) e não encostar texto na borda.
 
 ## 4.2. Conferir com o OLHO antes de entregar (obrigatório, imagem e vídeo)
 
+> Antes de qualquer coisa: **`docs/REVISAO-DESIGN.md` é o roteiro da revisão de direção de arte**,
+> e ele é obrigatório. Nada vai para o card sem passar por ele.
+
 Nunca entregar peça que não foi vista renderizada. Código sem erro não quer dizer arte certa:
 logo que não carregou, fonte que caiu para a do sistema, texto batendo na borda, foto cortada
 no rosto — nada disso aparece no HTML, só na imagem.
