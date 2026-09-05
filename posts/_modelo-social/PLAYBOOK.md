@@ -29,7 +29,7 @@ Concluído        o robô gera a MÍDIA FINAL (PNG 1080 / MP4) e põe os links d
    ajuste; o Claude **corrige o card** quantas vezes precisar. **Não se pergunta "é isso?"** — o sim
    dela é **mover o card para Priorizado**. Enquanto estiver em Entrada, não se produz nada.
 3. **Rascunho em HTML.** Montar o post no motor (é HTML: mudar texto e cor custa segundos).
-   Publicar (`npm run publicar` → https://bendita-atelie.netlify.app) e entregar no card **os dois**:
+   Publicar (`npm run publicar` → https://logiccos.github.io/bendita-atelie-site) e entregar no card **os dois**:
    o **link do rascunho ao vivo** (ela abre no celular e vê a arte de verdade) e o **preview leve**
    (`scripts/preview-card.py`, para ela ver sem sair do card).
 4. **Iterar** enquanto ela pedir ajuste. Cada rodada volta pro card — nunca só no WhatsApp.
@@ -128,7 +128,7 @@ fim da linha, rosto não cortado, área segura respeitada no 9:16, e o post **fa
 
 ## 4.3. O ateliê trabalha por mês
 
-A galeria (https://bendita-atelie.netlify.app) agrupa os criativos **por mês**, do mais recente
+A galeria (https://logiccos.github.io/bendita-atelie-site) agrupa os criativos **por mês**, do mais recente
 para o mais antigo — é o calendário de social media da Bendita. Para o post cair no mês certo,
 preencher `data: "AAAA-MM-DD"` na ficha (a data em que ele vai ao ar); sem isso ele cai no mês do
 arquivo. O material bruto também entra por mês: `rascunho/AAAA-MM/`.
