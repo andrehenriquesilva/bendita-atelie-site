@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ateliê Bendita — ver a arte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="marca/marca.css">
+<style>
+  body{background:#0E1E24;color:#FBFAF6;margin:0;padding:28px 20px 56px;font-family:var(--font-base)}
+  .topo{max-width:900px;margin:0 auto 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .voltar{color:var(--teal-light);text-decoration:none;font-weight:800;font-size:14px;letter-spacing:1px}
+  .cod{background:rgba(242,183,5,.16);color:var(--sun);font-weight:900;font-size:13px;
+       letter-spacing:2px;padding:7px 12px;border-radius:8px}
+  .formato{font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+           color:var(--teal-light);opacity:.85}
+  .moldura{max-width:900px;margin:0 auto;background:#14323B;border:1px solid rgba(224,242,242,.16);
+    border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+  .moldura img{display:block;width:100%;height:auto;border-radius:8px}
+  .acoes{max-width:900px;margin:20px auto 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .acoes a{display:inline-flex;align-items:center;gap:8px;background:var(--sun);color:var(--ink);
+    text-decoration:none;font-weight:900;font-size:14px;letter-spacing:1px;padding:13px 22px;border-radius:999px}
+  .acoes a.secundario{background:transparent;color:var(--teal-light);border:1px solid rgba(224,242,242,.28)}
+  .dica{max-width:900px;margin:14px auto 0;font-size:13px;opacity:.6}
+</style></head>
+<body>
+  <div class="topo">
+    <a class="voltar" href="index.html">&larr; VOLTAR PARA O ATELIÊ</a>
+    <span class="cod" id="cod" hidden></span>
+    <span class="formato" id="formato"></span>
+  </div>
+  <div class="moldura"><img id="arte" alt=""></div>
+  <div class="acoes">
+    <a id="baixar" download>&#8595; BAIXAR ESTE ARQUIVO</a>
+    <a class="secundario" id="abrir" target="_blank" rel="noopener">ABRIR EM TAMANHO REAL</a>
+  </div>
+  <p class="dica">É este arquivo que se posta. A moldura é só da tela — não faz parte da arte.</p>
+<script>
+  const q = new URLSearchParams(location.search);
+  const img = q.get('img') || '';
+  document.getElementById('arte').src = img;
+  document.getElementById('baixar').href = img;
+  document.getElementById('abrir').href = img;
+  document.getElementById('formato').textContent = q.get('f') || '';
+  const cod = q.get('cod');
+  if (cod) { const e = document.getElementById('cod'); e.textContent = cod; e.hidden = false;
+             document.title = cod + ' — ' + (q.get('f') || 'arte'); }
+</script>
+</body></html>

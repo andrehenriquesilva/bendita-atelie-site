@@ -66,7 +66,8 @@
     bloco.push(T.ctaTipo === 'seta'
       ? `<div class="seta">${T.cta}</div>`
       : T.ctaTipo === 'linha'
-        ? `<span class="cta-linha">${T.cta} &rarr;</span>`   // contorno dourado: tom executivo, sem verde
+        ? `<span class="cta-linha">${T.cta} &rarr;</span>` +
+          (T.ctaCaminho ? `<span class="cta-caminho">${T.ctaCaminho}</span>` : '')
         : `<span class="cta-wpp">${T.cta}</span>`);
   }
 
@@ -80,6 +81,9 @@
       <span class="linha">${T.rodape.linha || ''}</span>
     </div>`);
   }
+
+  // selo do eixo (canto oposto ao logo): e o que identifica a serie na miniatura
+  if (T.selo) post.insertAdjacentHTML('beforeend', `<div class="selo-eixo">${T.selo}</div>`);
 
   if (T.marca === false) post.querySelector('.marca').remove();
   if (n && telas.length > 1) {

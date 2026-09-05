@@ -97,19 +97,22 @@ html,body{background:#07151a;min-height:100vh;display:flex;justify-content:cente
 .trat-editorial{--dobra:52%;background:var(--navy)}
 
 /* a foto ocupa a arte inteira; quem cria o "painel" e o veu */
-.trat-editorial .foto{height:100%;bottom:0;object-position:center 12%;
-  /* sobe e aproxima o retrato: sem isso o queixo dela encostava na primeira linha do titulo */
-  transform:scale(1.12);transform-origin:50% 100%;
-  filter:saturate(.94) brightness(1.07)}   /* cala a placa ambar do fundo, que competia com o dourado */
+.trat-editorial .foto{height:100%;bottom:0;object-position:center 6%;
+  /* enquadramento aberto de proposito: ar acima do cabelo e o busto dissolvendo no veu.
+     O meio-termo (cabeca colada na borda) lia como acidente. */
+  /* crop deliberado: o cabelo sai pelo topo em vez de ficar "quase" encostando —
+     o meio-termo e que lia como acidente. E o rosto fica ACIMA do veu, nao dentro dele. */
+  transform:scale(1.16);transform-origin:50% 100%;
+  filter:saturate(.86)}   /* cala a placa ambar do fundo, que competia com o dourado */
 
 /* paradas em ORDEM (a versao anterior tinha 58% antes de 40% — o navegador
    grampeava tudo e o "degrade" era um corte seco por acidente) */
 .trat-editorial .veu{background:linear-gradient(0deg,
   rgba(14,30,36,.97) 0%,
   rgba(14,30,36,.97) 50%,
-  rgba(20,50,59,.80) 58%,
-  rgba(20,50,59,.22) 66%,
-  rgba(20,50,59,0)   73%)}
+  rgba(20,50,59,.78) 57%,
+  rgba(20,50,59,.20) 65%,
+  rgba(20,50,59,0)   72%)}
 
 /* sem fio de dobra: com a foto full-bleed ele virava um risco atravessando o titulo */
 
@@ -121,15 +124,21 @@ html,body{background:#07151a;min-height:100vh;display:flex;justify-content:cente
 .trat-editorial .titulo em{color:var(--sun)}
 
 /* as duas frases sao UM bloco, com um unico fio: a diferenca entre elas e so de cor */
-.trat-editorial .frases{margin-top:78px;display:flex;flex-direction:column;gap:26px;
-  border-left:3px solid rgba(242,183,5,.8);padding-left:30px}
-.trat-editorial .frases p{margin:0;font-size:31px;font-weight:500;line-height:1.45;color:#E4EFEF}
-.trat-editorial .frases p + p{color:#C7DADB}
+/* max-width menor que o titulo: a headline tem que ser a linha mais larga da peca */
+.trat-editorial .frases{margin-top:62px;display:flex;flex-direction:column;gap:22px;max-width:790px;
+  border-left:3px solid rgba(224,242,242,.30);padding-left:30px}
+/* hierarquia visivel: a pergunta-gancho pesa, a segunda apoia */
+.trat-editorial .frases p{margin:0;font-size:36px;font-weight:600;line-height:1.36;color:#F2F8F8}
+.trat-editorial .frases p + p{font-size:28px;font-weight:500;line-height:1.42;color:#A9C2C4}
 
-/* CTA executivo: contorno dourado. Verde e so do WhatsApp e quebraria o tom aqui */
+/* CTA executivo: dourado SOLIDO. O contorno vazado sumia na miniatura, justo no unico
+   elemento que precisa parecer clicavel. Verde continua reservado ao WhatsApp. */
 .trat-editorial .cta-linha{display:inline-block;margin-top:52px;align-self:flex-start;
-  border:2px solid rgba(242,183,5,.9);border-radius:999px;padding:18px 36px;
-  font-size:26px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--sun)}
+  background:var(--sun);border:2px solid var(--sun);border-radius:999px;padding:18px 36px;
+  font-size:26px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;color:var(--navy)}
+/* diz por onde responder — sem isso o convite nao tem destino */
+.trat-editorial .cta-caminho{display:block;margin-top:16px;font-size:23px;font-weight:600;
+  letter-spacing:.4px;color:rgba(251,250,246,.72)}
 
 /* rodape assinado — alinhado a esquerda, na MESMA coluna do texto (88px) */
 .rodape{position:absolute;left:0;right:0;bottom:0;z-index:4;height:126px;
@@ -139,7 +148,14 @@ html,body{background:#07151a;min-height:100vh;display:flex;justify-content:cente
 .rodape .nome{font-family:var(--font-base);font-weight:800;font-size:24px;letter-spacing:3.6px;
   text-transform:uppercase;color:var(--paper)}
 .rodape .barra{width:1px;height:26px;background:rgba(242,183,5,.75);flex:0 0 auto}
-.rodape .linha{font-size:19px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;
-  color:var(--teal-light)}
+.rodape .linha{font-size:20px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;
+  color:#DCEBEB}
 
 .trat-editorial .marca{width:104px;height:104px}
+
+/* selo do eixo corporativo — canto oposto ao logo. E o que identifica a serie na grade */
+.selo-eixo{position:absolute;top:var(--pad-topo);right:88px;z-index:4;
+  border:1.5px solid rgba(251,250,246,.34);border-radius:999px;padding:11px 22px;
+  background:rgba(10,27,33,.45);backdrop-filter:blur(4px);
+  font-family:var(--font-base);font-size:20px;font-weight:800;letter-spacing:3.4px;
+  text-transform:uppercase;color:rgba(251,250,246,.82)}

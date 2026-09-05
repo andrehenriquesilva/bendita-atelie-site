@@ -15,7 +15,8 @@ window.POST = {
   ancora: "baixo",
 
   // --- TEXTO ---
-  eyebrow: "",                   // o rodape ja assina "viagens corporativas" — repetir tirava 90px do titulo
+  eyebrow: "",                   // o rodape ja assina o eixo — repetir aqui tirava 90px do titulo
+  selo: "Corporativo",           // marca o eixo B2B na miniatura; batizar sub-marca nao e decisao do atelie
   titulo: "Sua empresa ainda<br><em>perde tempo</em><br>cuidando de viagens?",
 
   frases: [
@@ -27,6 +28,7 @@ window.POST = {
 
   // CTA proposto pelo conselho (a peca perguntava e nao dava saida) — a Josi pode vetar
   cta: "Fale com um especialista", ctaTipo: "linha",
+  ctaCaminho: "no direct ou no WhatsApp da bio",   // a peca perguntava e nao dizia por onde responder
 
   sub: "", itens: [], marca: true, telas: []
 };
