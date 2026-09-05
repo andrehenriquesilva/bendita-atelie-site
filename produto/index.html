@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Ateliê Bendita — exemplos</title>
+<title>Ateliê Bendita — artes</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../marca/marca.css">
 <style>
@@ -24,7 +24,9 @@
   .grade{display:grid;gap:26px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
   .card{position:relative;background:#14323B;border-radius:16px;overflow:hidden;
     box-shadow:0 12px 30px rgba(0,0,0,.35)}
-  .cod{position:absolute;top:10px;left:10px;z-index:2;background:rgba(14,30,36,.85);
+  /* o logo da arte fica no canto superior ESQUERDO — o codigo vai para a direita,
+     senao um tapa o outro (foi o que aconteceu com a B-033) */
+  .cod{position:absolute;top:10px;right:10px;z-index:2;background:rgba(14,30,36,.85);
     color:var(--sun);font-weight:900;font-size:13px;letter-spacing:2px;padding:7px 11px;
     border-radius:9px;backdrop-filter:blur(4px)}
   .capa{display:block;aspect-ratio:4/5;overflow:hidden;background:#0E1E24}
@@ -50,7 +52,7 @@
     box-shadow:0 12px 30px rgba(0,0,0,.35);border:2px solid transparent;transition:border-color .15s}
   .mes-btn:hover{border-color:var(--sun)}
   .tira{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0E1E24}
-  .tira div{aspect-ratio:4/5;background-size:cover;background-position:center}
+  .tira div{aspect-ratio:4/5;max-height:260px;background-size:cover;background-position:center top}
   .mes-btn .nome{font-family:var(--font-display);font-weight:900;font-size:30px;padding:18px 20px 0}
   .mes-btn .conta{padding:8px 20px 20px;font-size:13px;font-weight:700;letter-spacing:1px;
     color:var(--teal-light);opacity:.85}
@@ -58,53 +60,30 @@
 </head>
 <body>
   <header>
-    <a class="voltar" href="index.html">← todos os meses</a>
-    <h1>Exemplos do motor</h1>
-    <p>Referência de como cada tipo de post se monta. Não são posts publicados.</p>
+    <h1>Ateliê Bendita — artes</h1>
+    <p>Escolha o mês. Dentro dele estão as artes e os reels daquele período — a arte abre o rascunho ao vivo, o reel toca na página. O veredito é sempre no card do quadro, não aqui.</p>
   </header>
   <section class="bloco">
-    <h2 class="rotulo">exemplos <span>4</span></h2>
-    <div class="grade">
-      <article class="card">
-        <div class="cod">B-014</div>
-        <a class="capa" href="posts/_exemplo-autoridade/feed-quadrado-1x1.html"><img src="posts/_exemplo-autoridade/previews/feed-vertical-4x5.jpg" alt="" loading="lazy"></a>
-        <div class="txt">
-          <h2>Eu não vendo pacote.</h2>
-          <div class="slug">_exemplo-autoridade</div>
-          <div class="baixar"><a href="posts/_exemplo-autoridade/exports/feed-quadrado-1x1.png" download>&#8595; quadrado 1:1</a><a href="posts/_exemplo-autoridade/exports/feed-vertical-4x5.png" download>&#8595; feed 4:5</a><a href="posts/_exemplo-autoridade/exports/stories-9x16.png" download>&#8595; stories 9:16</a></div>
-          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-autoridade/feed-quadrado-1x1.html">feed-quadrado-1x1</a> · <a href="posts/_exemplo-autoridade/feed-vertical-4x5.html">feed-vertical-4x5</a> · <a href="posts/_exemplo-autoridade/stories-9x16.html">stories-9x16</a></div>
-        </div>
-      </article>
-      <article class="card">
-        <div class="cod">B-015</div>
-        <a class="capa" href="posts/_exemplo-carrossel/carrossel-4x5.html?t=1"><img src="posts/_exemplo-carrossel/previews/carrossel-01.jpg" alt="" loading="lazy"></a>
-        <div class="txt">
-          <h2>exemplo carrossel</h2>
-          <div class="slug">_exemplo-carrossel</div>
-          
-          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-carrossel/carrossel-4x5.html?t=1">tela 1</a> · <a href="posts/_exemplo-carrossel/carrossel-4x5.html?t=2">tela 2</a> · <a href="posts/_exemplo-carrossel/carrossel-4x5.html?t=3">tela 3</a></div>
-        </div>
-      </article>
-      <article class="card">
-        <div class="cod">B-016</div>
-        <a class="capa" href="posts/_exemplo-conteudo/feed-quadrado-1x1.html"><img src="posts/_exemplo-conteudo/previews/feed-vertical-4x5.jpg" alt="" loading="lazy"></a>
-        <div class="txt">
-          <h2>O melhor mês pra ir a Bento Gonçalves</h2>
-          <div class="slug">_exemplo-conteudo</div>
-          
-          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-conteudo/feed-quadrado-1x1.html">feed-quadrado-1x1</a> · <a href="posts/_exemplo-conteudo/feed-vertical-4x5.html">feed-vertical-4x5</a> · <a href="posts/_exemplo-conteudo/stories-9x16.html">stories-9x16</a></div>
-        </div>
-      </article>
-      <article class="card">
-        <div class="cod">B-017</div>
-        <a class="capa" href="posts/_exemplo-depoimento/feed-quadrado-1x1.html"><img src="posts/_exemplo-depoimento/previews/feed-vertical-4x5.jpg" alt="" loading="lazy"></a>
-        <div class="txt">
-          <h2>exemplo depoimento</h2>
-          <div class="slug">_exemplo-depoimento</div>
-          
-          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-depoimento/feed-quadrado-1x1.html">feed-quadrado-1x1</a> · <a href="posts/_exemplo-depoimento/feed-vertical-4x5.html">feed-vertical-4x5</a> · <a href="posts/_exemplo-depoimento/stories-9x16.html">stories-9x16</a></div>
-        </div>
-      </article>
+    <div class="meses">
+    <a class="mes-btn" href="mes-2026-09.html">
+      <div class="tira" style="grid-template-columns:repeat(1,1fr)"><div style="background-image:url(posts/2026-09/viagens-corporativas-gestao/previews/feed-vertical-4x5.jpg)"></div></div>
+      <div class="nome">Setembro de 2026</div>
+      <div class="conta">1 artes</div>
+    </a>
+    <a class="mes-btn" href="mes-2026-05.html">
+      <div class="tira" style="grid-template-columns:repeat(3,1fr)"><div style="background-image:url(posts/2026-05/africa-austral/previews/stories-9x16.jpg)"></div><div style="background-image:url(posts/2026-05/bahia-3em1/previews/stories-9x16.jpg)"></div><div style="background-image:url(posts/2026-05/bento-goncalves/previews/stories-9x16.jpg)"></div></div>
+      <div class="nome">Maio de 2026</div>
+      <div class="conta">13 artes · 15 reels</div>
+    </a>
+    </div>
+  </section>
+  <section class="bloco">
+    <h2 class="rotulo">referência</h2>
+    <div class="meses">
+      <a class="mes-btn" href="exemplos.html">
+        <div class="nome">Exemplos do motor</div>
+        <div class="conta">4 peças · como cada tipo se monta</div>
+      </a>
     </div>
   </section>
 </body>
