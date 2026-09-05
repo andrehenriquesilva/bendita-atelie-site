@@ -159,3 +159,59 @@ html,body{background:#07151a;min-height:100vh;display:flex;justify-content:cente
   background:rgba(10,27,33,.45);backdrop-filter:blur(4px);
   font-family:var(--font-base);font-size:20px;font-weight:800;letter-spacing:3.4px;
   text-transform:uppercase;color:rgba(251,250,246,.82)}
+
+/* ============================================================
+   CADA FORMATO E UMA ARTE, NAO UMA ADAPTACAO (pedido do Andre, 05/09).
+   O 4:5 acima e a peca base. Aqui embaixo, o 9:16 e o 1:1 sao
+   redesenhados para o espaco que tem — nao apenas "esticados".
+   ============================================================ */
+
+/* ---------- STORIES 9:16 (1080x1920): sobra altura, entao a foto vira presenca
+     e a tipografia cresce. O rodape sobe: a UI do app come a base da tela. ---------- */
+/* no stories a foto e FAIXA (nao full-bleed): so assim o rosto fica inteiro em cima e o
+   texto tem painel proprio. Full-bleed aqui poe o titulo em cima da cara dela. */
+.f-9x16 .foto{height:40%;bottom:auto;transform:none;object-position:center 18%}
+.f-9x16 .veu{background:linear-gradient(0deg,
+  rgba(14,30,36,.97) 0%,
+  rgba(14,30,36,.97) 60%,
+  rgba(20,50,59,.80) 66%,
+  rgba(20,50,59,.22) 72%,
+  rgba(20,50,59,0)   79%)}
+.f-9x16 .conteudo{padding:var(--pad-topo) 88px 300px;justify-content:flex-end}
+.f-9x16 .titulo{font-size:104px;line-height:1.03}
+.f-9x16 .frases{margin-top:78px;gap:30px;max-width:900px}
+.f-9x16 .frases p{font-size:44px;line-height:1.34}
+.f-9x16 .frases p + p{font-size:35px;line-height:1.4}
+.f-9x16 .cta-linha{margin-top:66px;font-size:32px;padding:24px 46px}
+.f-9x16 .cta-caminho{font-size:28px;margin-top:20px}
+.f-9x16 .rodape{bottom:150px;height:132px}        /* acima da area que o app cobre */
+.f-9x16 .rodape .nome{font-size:26px}
+.f-9x16 .rodape .linha{font-size:22px}
+.f-9x16 .selo-eixo{top:var(--pad-topo);font-size:23px;padding:13px 26px}
+.f-9x16 .marca{width:120px;height:120px}
+
+/* ---------- QUADRADO 1:1 (1080x1080): retrato nao cabe em faixa horizontal — a cabeca
+     e maior que a faixa e o veu comia o rosto. Entao o quadrado ganha o desenho que ele
+     pede: DUAS COLUNAS — retrato inteiro na direita (formato alto, onde ele cabe), texto
+     na esquerda. Nao e o 4:5 espremido: e outra composicao. ---------- */
+.f-1x1 .foto{width:47%;left:auto;right:0;height:100%;transform:none;
+  object-position:52% 16%;filter:saturate(.9)}
+/* veu horizontal: escurece da esquerda (texto) para a direita (foto) */
+.f-1x1 .veu{background:linear-gradient(90deg,
+  rgba(14,30,36,.97) 0%,
+  rgba(14,30,36,.97) 50%,
+  rgba(20,50,59,.72) 58%,
+  rgba(20,50,59,.18) 67%,
+  rgba(20,50,59,0)   76%)}
+.f-1x1 .conteudo{padding:96px 60px 130px 72px;justify-content:center;max-width:600px}
+.f-1x1 .titulo{font-size:52px;line-height:1.08}
+.f-1x1 .frases{margin-top:34px;gap:0;max-width:470px;padding-left:22px;border-left-width:3px}
+.f-1x1 .frases p{font-size:26px;line-height:1.4}
+.f-1x1 .frases p + p{display:none}     /* no quadrado entra so a pergunta-gancho */
+.f-1x1 .cta-linha{margin-top:34px;font-size:21px;padding:15px 28px;letter-spacing:1.8px}
+.f-1x1 .cta-caminho{font-size:19px;margin-top:11px}
+.f-1x1 .rodape{height:88px;padding:0 72px;background:#0A1B21}
+.f-1x1 .rodape .nome{font-size:19px;letter-spacing:2.8px}
+.f-1x1 .rodape .linha{font-size:16px;letter-spacing:1.1px}
+.f-1x1 .selo-eixo{top:64px;right:64px;font-size:16px;padding:9px 17px;letter-spacing:2.4px}
+.f-1x1 .marca{width:82px;height:82px;top:64px;left:72px}
