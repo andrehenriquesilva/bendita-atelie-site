@@ -51,8 +51,11 @@
   .mes-btn{display:block;text-decoration:none;background:#14323B;border-radius:18px;overflow:hidden;
     box-shadow:0 12px 30px rgba(0,0,0,.35);border:2px solid transparent;transition:border-color .15s}
   .mes-btn:hover{border-color:var(--sun)}
-  .tira{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0E1E24}
-  .tira div{aspect-ratio:4/5;max-height:260px;background-size:cover;background-position:center top}
+  /* a tira e uma faixa de altura fixa: o mes com 1 arte enche a largura, o com 3
+     divide em 3 — e nenhum deles fica com buraco preto nem com a foto encolhida */
+  .tira{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0E1E24;
+    max-height:280px;overflow:hidden}
+  .tira div{aspect-ratio:4/5;background-size:cover;background-position:center top}
   .mes-btn .nome{font-family:var(--font-display);font-weight:900;font-size:30px;padding:18px 20px 0}
   .mes-btn .conta{padding:8px 20px 20px;font-size:13px;font-weight:700;letter-spacing:1px;
     color:var(--teal-light);opacity:.85}
