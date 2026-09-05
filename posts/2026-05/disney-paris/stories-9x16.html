@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Bendita Tour — Disneyland Paris · 9:16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../marca/marca.css">
+<style>
+  html,body{background:#07151a;display:flex;justify-content:center;align-items:center;padding:24px}
+  .post{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--navy)}
+
+  /* ---- HERO: foto limpa ---- */
+  .hero{position:absolute;top:0;left:0;right:0;height:1010px;overflow:hidden}
+  .hero .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  .hero .vt{position:absolute;top:0;left:0;right:0;height:34%;
+      background:linear-gradient(180deg,rgba(14,30,36,.7),rgba(14,30,36,0))}
+  .hero .vbase{position:absolute;bottom:0;left:0;right:0;height:40%;
+      background:linear-gradient(0deg,var(--navy) 2%,rgba(20,50,59,.5) 45%,rgba(20,50,59,0))}
+
+  .logo{position:absolute;top:80px;left:50%;transform:translateX(-50%);z-index:4;width:420px}
+  .logo img{width:100%;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+
+  .headline{position:absolute;left:70px;right:70px;bottom:46px;z-index:4;text-align:center;color:#fff}
+  .headline .eyebrow{display:inline-flex;justify-content:center;color:#fff;margin-bottom:22px;
+      font-size:19px;letter-spacing:4px;font-weight:800;background:rgba(74,155,159,.85);
+      padding:10px 22px;border-radius:999px;backdrop-filter:blur(2px)}
+  .headline .eyebrow::before,.headline .eyebrow::after{display:none}
+  .headline .destino{font-family:var(--font-display);font-weight:900;font-size:96px;line-height:.92;
+      text-shadow:0 8px 30px rgba(0,0,0,.55)}
+  .headline .destino small{display:block;font-family:var(--font-base);font-weight:700;font-size:46px;
+      letter-spacing:3px;color:var(--teal-light);margin-bottom:4px}
+  .headline .dates{display:inline-block;margin-top:22px;background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.4);padding:11px 30px;border-radius:999px;font-weight:700;font-size:31px}
+
+  /* ---- PAINEL de oferta ---- */
+  .panel{position:absolute;left:0;right:0;bottom:0;min-height:960px;z-index:5;
+      background:linear-gradient(160deg,var(--teal-dark) 0%,#14323B 100%);
+      border-radius:54px 54px 0 0;box-shadow:0 -20px 50px rgba(0,0,0,.4);
+      padding:42px 64px 50px}
+  .panel .tit{text-align:center;font-weight:800;font-size:24px;letter-spacing:5px;text-transform:uppercase;
+      color:var(--sun);margin-bottom:24px}
+  .incl{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px;margin-bottom:26px}
+  .incl li{list-style:none;display:flex;align-items:flex-start;gap:14px}
+  .incl li.full{grid-column:1 / -1;background:rgba(255,255,255,.08);border:1px solid rgba(242,183,5,.4);
+      border-radius:18px;padding:18px 22px}
+  .incl .ck{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--sun);color:var(--ink);
+      display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;margin-top:2px}
+  .incl .t{font-weight:800;font-size:28px;color:#fff;line-height:1.12}
+  .incl .d{font-weight:600;font-size:22px;color:rgba(255,255,255,.78);line-height:1.22;margin-top:4px}
+  .incl .subs{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+  .incl .subs span{font-size:23px;font-weight:600;color:rgba(255,255,255,.92);padding-left:26px;position:relative}
+  .incl .subs span::before{content:"›";position:absolute;left:4px;top:-1px;color:var(--sun);font-weight:900;font-size:26px}
+
+  .sep{height:1px;background:rgba(255,255,255,.18);margin:2px 0 22px}
+
+  .deal{text-align:center}
+  .deal .pre{font-size:25px;font-weight:700;color:var(--teal-light);margin-bottom:8px}
+  .deal .chip{display:inline-flex;align-items:baseline;gap:10px;background:var(--sun);color:var(--ink);
+      font-weight:900;border-radius:20px;padding:12px 36px;font-size:76px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .deal .chip small{font-size:33px}
+  .deal .off{font-size:24px;font-weight:700;margin:14px 0 26px;color:#fff}
+  .deal .off b{color:var(--sun)}
+  .cta{display:flex;align-items:center;justify-content:center;gap:16px;width:100%;
+      background:var(--wpp);color:#fff;font-weight:800;font-size:37px;border-radius:20px;padding:26px;
+      box-shadow:0 12px 30px rgba(32,189,90,.45)}
+  .cta svg{width:44px;height:44px;fill:#fff;flex:0 0 auto}
+</style>
+</head>
+<body>
+  <div class="post">
+    <div class="hero">
+      <img class="photo" src="assets/castelo-ia.png" alt="">
+      <div class="vt"></div><div class="vbase"></div>
+      <div class="logo"><img src="../../../../marca/identidade-oficial/logotipos/png-transparente/principal-branco.png" alt="Bendita Tour"></div>
+      <div class="headline">
+        <span class="eyebrow">Pacote Completo · Aéreo + Hotel + Ingressos</span>
+        <div class="destino"><small>PARIS COM</small>Disneyland Paris</div>
+        <span class="dates">6 dias · 04 a 09/08 · saindo de São Paulo</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="tit">O que está incluso</div>
+      <ul class="incl">
+        <li class="full"><span class="ck">✓</span><div><div class="t">Ingressos · 1 dia para os 2 parques</div><div class="subs"><span>Disneyland Park</span><span>Disney Adventure World</span><span>Encantado e novo World of Frozen</span></div></div></li>
+        <li><span class="ck">✓</span><div><div class="t">Aéreo LATAM</div><div class="d">saindo de São Paulo via GRU</div></div></li>
+        <li><span class="ck">✓</span><div><div class="t">Hotel Aramis Saint-Germain</div><div class="d">Best Western</div></div></li>
+        <li><span class="ck">✓</span><div><div class="t">Café da manhã</div></div></li>
+        <li><span class="ck">✓</span><div><div class="t">Transfers</div></div></li>
+        <li><span class="ck">✓</span><div><div class="t">Ônibus turístico</div><div class="d">em Paris</div></div></li>
+        <li><span class="ck">✓</span><div><div class="t">Seguro viagem</div></div></li>
+      </ul>
+      <div class="sep"></div>
+      <div class="deal">
+        <div class="pre">por pessoa, a partir de</div>
+        <div><span class="chip"><small>12x</small> R$ 1.035</span></div>
+        <div class="off">+ taxas R$ 712 · <b>7% OFF</b> à vista</div>
+        <div class="cta">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.13h-.003a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43-.14 0-.31-.01-.48-.01a.92.92 0 0 0-.67.31c-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.77 2.71 4.3 3.8.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+          <span>Chame no WhatsApp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

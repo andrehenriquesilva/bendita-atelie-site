@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../marca/marca.css">
+<style>
+  html,body{background:transparent;margin:0}
+  .ov{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:var(--font-base)}
+
+  /* topo: logo + eyebrow sobre leve véu */
+  .vt{position:absolute;top:0;left:0;right:0;height:23%;
+      background:linear-gradient(180deg,rgba(14,30,36,.72),rgba(14,30,36,0))}
+  .logo{position:absolute;top:70px;left:50%;transform:translateX(-50%);width:400px}
+  .logo img{width:100%;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+
+  /* faixa inferior: destino + preço + CTA */
+  .vb{position:absolute;left:0;right:0;bottom:0;height:46%;
+      background:linear-gradient(0deg,rgba(14,30,36,.94) 0%,rgba(14,30,36,.72) 40%,rgba(14,30,36,0))}
+  .info{position:absolute;left:70px;right:70px;bottom:140px;text-align:center;color:#fff}
+  .eyebrow{justify-content:center;color:var(--sun);margin-bottom:20px}
+  .destino{font-family:var(--font-display);font-weight:900;font-size:104px;line-height:.92;
+      text-shadow:0 8px 28px rgba(0,0,0,.6)}
+  .destino small{display:block;font-family:var(--font-base);font-weight:700;font-size:42px;
+      letter-spacing:2px;color:var(--teal-light)}
+  .dates{font-weight:700;font-size:32px;margin:18px 0 30px;color:#fff}
+  .chip{display:inline-flex;align-items:baseline;gap:10px;background:var(--sun);color:var(--ink);
+      font-weight:900;border-radius:999px;padding:16px 42px;font-size:80px;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+  .chip small{font-size:36px}
+  .avista{font-size:30px;font-weight:700;margin-top:14px}.avista b{color:var(--sun)}
+  .cta{display:inline-flex;align-items:center;gap:12px;background:var(--wpp);color:#fff;font-weight:800;
+      font-size:34px;border-radius:999px;padding:20px 44px;margin-top:30px;box-shadow:0 14px 34px rgba(32,189,90,.5)}
+</style>
+</head>
+<body>
+  <div class="ov">
+    <div class="vt"></div>
+    <div class="logo"><img src="../../../../marca/identidade-oficial/logotipos/png-transparente/principal-branco.png"></div>
+    <div class="vb"></div>
+    <div class="info">
+      <span class="eyebrow">Pacote Completo · Aéreo + Hotel + Disney</span>
+      <div class="destino"><small>PARIS &amp;</small>Disneyland</div>
+      <div class="dates">6 dias · 04 a 09/08 · saindo de SP</div>
+      <div><span class="chip"><small>12x</small> R$ 1.035</span></div>
+      <div class="avista">por pessoa · <b>7% OFF</b> à vista</div>
+      <div><span class="cta">💬 Chame no WhatsApp</span></div>
+    </div>
+  </div>
+</body>
+</html>

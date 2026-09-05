@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ateliê Bendita — exemplos</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../marca/marca.css">
+<style>
+  body{background:#0E1E24;color:#FBFAF6;padding:40px 24px 80px}
+  a{color:inherit}
+  header,.bloco{max-width:1200px;margin:0 auto}
+  header{margin-bottom:38px}
+  h1{font-family:var(--font-display);font-weight:900;font-size:44px;line-height:1.05}
+  header p{margin-top:12px;opacity:.75;font-size:16px;max-width:62ch;line-height:1.5}
+  .voltar{display:inline-block;margin-bottom:22px;font-size:13px;font-weight:800;letter-spacing:2px;
+    text-transform:uppercase;color:var(--sun);text-decoration:none}
+  .rotulo{font-size:15px;font-weight:800;letter-spacing:4px;text-transform:uppercase;
+    color:var(--sun);margin:0 0 20px;display:flex;align-items:center;gap:12px}
+  .rotulo::after{content:"";flex:1;height:1px;background:rgba(242,183,5,.25)}
+  .rotulo span{order:3;font-size:12px;color:var(--paper);opacity:.5}
+  .bloco{margin-bottom:52px}
+  .grade{display:grid;gap:26px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .card{position:relative;background:#14323B;border-radius:16px;overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.35)}
+  .cod{position:absolute;top:10px;left:10px;z-index:2;background:rgba(14,30,36,.85);
+    color:var(--sun);font-weight:900;font-size:13px;letter-spacing:2px;padding:7px 11px;
+    border-radius:9px;backdrop-filter:blur(4px)}
+  .capa{display:block;aspect-ratio:4/5;overflow:hidden;background:#0E1E24}
+  .capa img{width:100%;height:100%;object-fit:cover;display:block}
+  /* reel e 1080x1920: 'contain' mostra o quadro inteiro. Com 'cover', a tela cheia num
+     monitor deitado CORTAVA o video para preencher — era o que parecia video errado. */
+  .card video{width:100%;display:block;background:#000;aspect-ratio:9/16;object-fit:contain}
+  .card video:fullscreen,.card video:-webkit-full-screen{
+    aspect-ratio:auto;width:100%;height:100%;object-fit:contain;background:#000}
+  .txt{padding:16px 18px 20px}
+  .txt h2{font-size:17px;font-weight:800;line-height:1.25}
+  .slug{font-size:12px;opacity:.5;margin-top:6px;letter-spacing:1px}
+  .links{margin-top:12px;font-size:12px;line-height:1.9}
+  .links a{color:var(--sun);text-decoration:none;border-bottom:1px solid rgba(242,183,5,.3)}
+  .baixar{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .baixar a{display:inline-flex;align-items:center;gap:6px;background:var(--sun);color:var(--ink);
+    font-weight:800;font-size:12px;letter-spacing:.5px;padding:8px 12px;border-radius:8px;
+    text-decoration:none}
+  .baixar a.reel{background:var(--wpp);color:#fff}
+  .rascunho{margin-top:10px;font-size:11px;opacity:.55;letter-spacing:.5px}
+  .meses{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .mes-btn{display:block;text-decoration:none;background:#14323B;border-radius:18px;overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);border:2px solid transparent;transition:border-color .15s}
+  .mes-btn:hover{border-color:var(--sun)}
+  .tira{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0E1E24}
+  .tira div{aspect-ratio:4/5;background-size:cover;background-position:center}
+  .mes-btn .nome{font-family:var(--font-display);font-weight:900;font-size:30px;padding:18px 20px 0}
+  .mes-btn .conta{padding:8px 20px 20px;font-size:13px;font-weight:700;letter-spacing:1px;
+    color:var(--teal-light);opacity:.85}
+</style>
+</head>
+<body>
+  <header>
+    <a class="voltar" href="index.html">← todos os meses</a>
+    <h1>Exemplos do motor</h1>
+    <p>Referência de como cada tipo de post se monta. Não são posts publicados.</p>
+  </header>
+  <section class="bloco">
+    <h2 class="rotulo">exemplos <span>4</span></h2>
+    <div class="grade">
+      <article class="card">
+        <div class="cod">B-014</div>
+        <a class="capa" href="posts/_exemplo-autoridade/feed-quadrado-1x1.html"><img src="posts/_exemplo-autoridade/previews/feed-vertical-4x5.jpg" alt="" loading="lazy"></a>
+        <div class="txt">
+          <h2>Eu não vendo pacote.</h2>
+          <div class="slug">_exemplo-autoridade</div>
+          <div class="baixar"><a href="posts/_exemplo-autoridade/exports/feed-quadrado-1x1.png" download>&#8595; quadrado 1:1</a><a href="posts/_exemplo-autoridade/exports/feed-vertical-4x5.png" download>&#8595; feed 4:5</a><a href="posts/_exemplo-autoridade/exports/stories-9x16.png" download>&#8595; stories 9:16</a></div>
+          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-autoridade/feed-quadrado-1x1.html">feed-quadrado-1x1</a> · <a href="posts/_exemplo-autoridade/feed-vertical-4x5.html">feed-vertical-4x5</a> · <a href="posts/_exemplo-autoridade/stories-9x16.html">stories-9x16</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cod">B-015</div>
+        <a class="capa" href="posts/_exemplo-carrossel/carrossel-4x5.html?t=1"><img src="posts/_exemplo-carrossel/previews/carrossel-01.jpg" alt="" loading="lazy"></a>
+        <div class="txt">
+          <h2>exemplo carrossel</h2>
+          <div class="slug">_exemplo-carrossel</div>
+          
+          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-carrossel/carrossel-4x5.html?t=1">tela 1</a> · <a href="posts/_exemplo-carrossel/carrossel-4x5.html?t=2">tela 2</a> · <a href="posts/_exemplo-carrossel/carrossel-4x5.html?t=3">tela 3</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cod">B-016</div>
+        <a class="capa" href="posts/_exemplo-conteudo/feed-quadrado-1x1.html"><img src="posts/_exemplo-conteudo/previews/feed-vertical-4x5.jpg" alt="" loading="lazy"></a>
+        <div class="txt">
+          <h2>O melhor mês pra ir a Bento Gonçalves</h2>
+          <div class="slug">_exemplo-conteudo</div>
+          
+          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-conteudo/feed-quadrado-1x1.html">feed-quadrado-1x1</a> · <a href="posts/_exemplo-conteudo/feed-vertical-4x5.html">feed-vertical-4x5</a> · <a href="posts/_exemplo-conteudo/stories-9x16.html">stories-9x16</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cod">B-017</div>
+        <a class="capa" href="posts/_exemplo-depoimento/feed-quadrado-1x1.html"><img src="posts/_exemplo-depoimento/previews/feed-vertical-4x5.jpg" alt="" loading="lazy"></a>
+        <div class="txt">
+          <h2>exemplo depoimento</h2>
+          <div class="slug">_exemplo-depoimento</div>
+          
+          <div class="rascunho">rascunho (HTML): <a href="posts/_exemplo-depoimento/feed-quadrado-1x1.html">feed-quadrado-1x1</a> · <a href="posts/_exemplo-depoimento/feed-vertical-4x5.html">feed-vertical-4x5</a> · <a href="posts/_exemplo-depoimento/stories-9x16.html">stories-9x16</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+</body>
+</html>

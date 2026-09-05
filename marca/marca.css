@@ -1,0 +1,78 @@
+/* ============================================================
+   BENDITA TOUR — Tokens de marca para criação de mídia
+   Importe em qualquer HTML de arte:
+     <link rel="stylesheet" href="../../../marca/marca.css">
+   (ajuste o número de "../" conforme a profundidade da pasta)
+   ============================================================ */
+
+:root{
+  /* --- Primárias (espelham benditatour.com / tailwind.config.js) --- */
+  --teal:        #4A9B9F;   /* brand principal */
+  --teal-dark:   #3A7D80;   /* hover / fundos profundos */
+  --teal-light:  #E0F2F2;   /* fundos claros / chips */
+
+  /* --- Apoio de viagem (paleta estendida p/ artes) --- */
+  --navy:        #14323B;   /* texto sobre claro / fundos sólidos */
+  --ink:         #0E1E24;   /* quase-preto azulado (véus, sombras) */
+  --sand:        #F6EEDD;   /* creme / "paper" */
+  --paper:       #FBFAF6;
+  --sun:         #F2B705;   /* dourado — preço, selo, destaque */
+  --sunset:      #F2724B;   /* coral — promoção / urgência */
+  --wpp:         #20BD5A;   /* verde WhatsApp — CTA */
+
+  /* --- Tipografia --- */
+  --font-base:    'Montserrat', system-ui, sans-serif;     /* corpo (igual ao site) */
+  --font-display: 'Playfair Display', Georgia, serif;      /* headlines elegantes de viagem */
+}
+
+/* Importe as fontes uma vez no <head> da arte:
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+*/
+
+/* ---- Utilitários comuns de arte ---- */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-base);-webkit-font-smoothing:antialiased}
+
+/* Véu superior para legibilidade de texto sobre foto */
+.veil-top{
+  position:absolute;left:0;right:0;top:0;height:46%;
+  background:linear-gradient(180deg,
+    rgba(14,30,36,.82) 0%, rgba(14,30,36,.52) 38%,
+    rgba(14,30,36,.18) 72%, rgba(14,30,36,0) 100%);
+  z-index:2;pointer-events:none;
+}
+/* Véu inferior para CTA / preço */
+.veil-bottom{
+  position:absolute;left:0;right:0;bottom:0;height:42%;
+  background:linear-gradient(0deg,
+    rgba(14,30,36,.85) 0%, rgba(14,30,36,.45) 45%,
+    rgba(14,30,36,0) 100%);
+  z-index:2;pointer-events:none;
+}
+
+/* Eyebrow (sobre-título) padrão Bendita */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:var(--font-base);font-weight:800;
+  font-size:15px;letter-spacing:6px;text-transform:uppercase;
+  color:var(--teal-light);
+}
+.eyebrow::before,.eyebrow::after{
+  content:"";display:block;width:30px;height:2px;background:var(--sun);border-radius:2px;
+}
+
+/* Chip de preço / selo de oferta */
+.price-chip{
+  display:inline-flex;align-items:baseline;gap:6px;
+  background:var(--sun);color:var(--ink);
+  font-weight:900;border-radius:999px;
+  padding:10px 22px;box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+
+/* Botão CTA WhatsApp */
+.cta-wpp{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--wpp);color:#fff;font-weight:800;
+  border-radius:999px;padding:14px 26px;
+  box-shadow:0 12px 30px rgba(32,189,90,.45);
+}

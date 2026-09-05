@@ -1,0 +1,26 @@
+/* ============================================================
+   BENDITA TOUR — Paleta oficial (extraída do Manual da ID + tailwind do site)
+   ============================================================ */
+:root{
+  /* --- Núcleo da marca --- */
+  --bt-teal:        #4A9B9F;  /* principal (web / tailwind brand.DEFAULT) */
+  --bt-teal-print:  #37AAAA;  /* teal do Manual da ID (impressos) */
+  --bt-teal-dark:   #3A7D80;  /* hover / fundos profundos */
+  --bt-teal-light:  #E0F2F2;  /* fundos claros / chips */
+  --bt-white:       #FFFFFF;  /* logo sobre teal / respiro */
+
+  /* --- Neutros (Manual da ID) --- */
+  --bt-ink:         #1D1D1B;  /* preto da marca (texto/veladuras) */
+  --bt-gray:        #E6E6E6;  /* cinza claro / linhas */
+
+  /* --- Apoio p/ artes promocionais (não no manual, usar com parcimônia) --- */
+  --bt-sun:         #F2B705;  /* dourado — preço / selo */
+  --bt-sunset:      #F2724B;  /* coral — promoção / urgência */
+  --bt-wpp:         #20BD5A;  /* verde WhatsApp — CTA */
+
+  /* --- Tipografia OFICIAL --- */
+  --bt-font-display: 'Safira March', 'Playfair Display', Georgia, serif; /* logo / headlines */
+  --bt-font-body:    'Mont', 'Montserrat', system-ui, sans-serif;        /* corpo */
+}
+/* Nota: 'Safira March' e 'Mont' são as fontes do manual (uso/demo).
+   Na web sem elas, caem para Playfair Display + Montserrat (aproximação fiel). */

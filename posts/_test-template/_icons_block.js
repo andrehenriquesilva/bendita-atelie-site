@@ -1,0 +1,12 @@
+const ICONS = {
+      aereo:"",
+      bagagem:"",
+      hotel:"",
+      cafe:"",
+      transfer:"",
+      guia:"",
+      safari:"",
+      praia:"",
+      noites:"",
+      check:""
+    };

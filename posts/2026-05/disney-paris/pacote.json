@@ -1,0 +1,24 @@
+{
+  "destino": "Paris + Disneyland Paris",
+  "tema": "Disney",
+  "duracao": "6 dias",
+  "periodo": "04 a 09/08",
+  "origem": "São Paulo (GRU)",
+  "inclui": [
+    "Aéreo LATAM (ida e volta)",
+    "Hospedagem Hôtel Aramis Saint-Germain (Best Western)",
+    "Café da manhã",
+    "Ingressos 1 dia para os 2 parques (Disneyland Park + Disney Adventure World)",
+    "World of Frozen (novidade)",
+    "Transfers",
+    "Ônibus turístico em Paris",
+    "Seguro viagem + Protect Travel (até R$ 12 mil)"
+  ],
+  "destaques": ["2 parques Disney", "World of Frozen", "Aéreo + Hotel + Ingressos"],
+  "preco_pacote": { "parcelado": "12x R$ 1.035", "por": "pessoa", "avista_off": "7%" },
+  "cta": "Chame no WhatsApp",
+  "_ignorado": {
+    "aereo_isolado": "De R$ 9.854 / Por R$ 7.168 — composição interna, NÃO anunciar",
+    "firula_fornecedor": ["selo Maio Imperdível", "sorteio Copa 2026 / 100 prêmios", "identidade visual azul do fornecedor"]
+  }
+}

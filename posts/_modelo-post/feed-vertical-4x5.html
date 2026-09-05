@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Bendita Tour — modelo de post · feed vertical 4:5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../marca/marca.css">
+<style>
+  html,body{background:#07151a;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:24px}
+
+  /* FEED VERTICAL 4:5 — 1080 x 1350 (principal do feed IG) */
+  .post{position:relative;width:1080px;height:1350px;overflow:hidden}
+
+  .post .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1;
+    background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 55%,var(--sunset) 120%)}
+
+  .headline{position:absolute;top:90px;left:72px;right:72px;z-index:3;text-align:center;color:var(--paper)}
+  .headline .eyebrow{margin-bottom:20px}
+  .headline .destino{font-family:var(--font-display);font-weight:900;font-size:124px;line-height:.9;
+    text-shadow:0 6px 24px rgba(0,0,0,.5)}
+  .headline .sub{font-weight:700;font-size:30px;letter-spacing:1px;margin-top:18px;color:var(--teal-light)}
+
+  .footer{position:absolute;left:72px;right:72px;bottom:80px;z-index:3;text-align:center}
+  .footer .price small{display:block;font-weight:700;font-size:20px;color:var(--paper);opacity:.9;margin-bottom:8px}
+  .footer .price-chip{font-size:52px;margin-bottom:26px}.footer .price-chip small{font-size:24px;opacity:.7}
+  .footer .cta-wpp{font-size:24px}
+  .brand{position:absolute;right:30px;top:30px;z-index:4;width:104px;height:104px;border-radius:50%;
+    border:2px solid var(--sun);overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(0,0,0,.45)}
+  .brand img{width:100%;height:100%;object-fit:cover}
+</style>
+</head>
+<body>
+  <div class="post">
+    <img class="photo" src="assets/destino.jpg" alt="">
+    <div class="veil-top"></div>
+    <div class="veil-bottom"></div>
+
+    <div class="brand"><img src="../../../marca/assets/ICONE.webp" alt="Bendita Tour"></div>
+
+    <div class="headline">
+      <span class="eyebrow">Bendita Tour</span>
+      <div class="destino">CANCÚN</div>
+      <div class="sub">7 noites · all inclusive · aéreo incluso</div>
+    </div>
+
+    <div class="footer">
+      <div class="price">
+        <small>a partir de</small>
+        <span class="price-chip"><small>12x</small> R$ 389</span>
+      </div>
+      <span class="cta-wpp">Chamar no WhatsApp →</span>
+    </div>
+  </div>
+</body>
+</html>

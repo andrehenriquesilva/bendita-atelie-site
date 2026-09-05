@@ -1,0 +1,87 @@
+/* ============================================================
+   POST SOCIAL — estilo compartilhado pelos 3 formatos.
+   O canvas tem SEMPRE 1080 de largura; só a altura muda
+   (1350 / 1920 / 1080), então as medidas em px valem para os três.
+   Cada HTML só ajusta a área segura (--pad-topo / --pad-baixo).
+   ============================================================ */
+html,body{background:#07151a;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:24px}
+
+/* O canvas E a imagem postada: nada de canto arredondado, sombra, moldura ou
+   qualquer enfeite de tela aqui — o que estiver no .post vai para o PNG e
+   aparece assim no Instagram/Facebook. Decoracao so fora do .post. */
+.post{position:relative;width:1080px;overflow:hidden;background:var(--ink);
+  --pad:88px;--pad-topo:110px;--pad-baixo:110px}
+
+.post .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1;
+  background:linear-gradient(160deg,var(--teal) 0%,var(--teal-dark) 55%,var(--navy) 115%)}
+
+/* ---- TRATAMENTOS da foto (campo `tratamento` da ficha) ---- */
+.veu{position:absolute;inset:0;z-index:2;pointer-events:none}
+.trat-veu-baixo .veu{background:linear-gradient(0deg,rgba(14,30,36,.92) 0%,rgba(14,30,36,.62) 38%,rgba(14,30,36,.12) 72%,rgba(14,30,36,0) 100%)}
+.trat-veu-topo  .veu{background:linear-gradient(180deg,rgba(14,30,36,.92) 0%,rgba(14,30,36,.60) 40%,rgba(14,30,36,.10) 75%,rgba(14,30,36,0) 100%)}
+.trat-veu-total .veu{background:radial-gradient(120% 80% at 50% 45%,rgba(14,30,36,.48) 0%,rgba(14,30,36,.78) 100%)}
+.trat-duotone   .foto{filter:grayscale(1) contrast(1.06)}
+.trat-duotone   .veu{background:linear-gradient(150deg,rgba(74,155,159,.86) 0%,rgba(20,50,59,.92) 100%);mix-blend-mode:multiply}
+.trat-duotone::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(14,30,36,.55),rgba(14,30,36,0) 60%)}
+.trat-limpo     .veu{background:none}
+/* cartão: foto em cima, painel sólido embaixo com o texto (bom p/ dica e lista) */
+.trat-cartao .foto{height:54%;bottom:auto}
+.trat-cartao .veu{background:linear-gradient(0deg,var(--navy) 0%,var(--navy) 46%,rgba(20,50,59,.35) 54%,rgba(20,50,59,0) 62%)}
+
+/* ---- CONTEÚDO ---- */
+.conteudo{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;
+  padding:var(--pad-topo) var(--pad) var(--pad-baixo);color:var(--paper)}
+.anc-baixo  .conteudo{justify-content:flex-end}
+.anc-centro .conteudo{justify-content:center;text-align:center;align-items:center}
+.anc-topo   .conteudo{justify-content:flex-start}
+
+.eyebrow{font-size:22px;letter-spacing:7px}
+.eyebrow::before,.eyebrow::after{width:38px;height:3px}
+
+.titulo{font-family:var(--font-display);font-weight:900;font-size:104px;line-height:.98;
+  margin-top:30px;text-shadow:0 10px 34px rgba(0,0,0,.55)}
+.titulo em{font-style:normal;color:var(--sun)}
+.titulo.curto{font-size:126px}
+
+.sub{font-weight:600;font-size:38px;line-height:1.35;margin-top:28px;color:#EAF4F4;
+  text-shadow:0 4px 18px rgba(0,0,0,.5)}
+
+.itens{list-style:none;margin-top:40px;display:flex;flex-direction:column;gap:24px}
+.itens li{display:flex;gap:20px;align-items:flex-start;font-size:36px;font-weight:600;line-height:1.3}
+.itens .ck{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:var(--sun);color:var(--ink);
+  font-size:26px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.anc-centro .itens li{text-align:left}
+
+/* depoimento de cliente */
+.depo{background:var(--paper);color:var(--navy);border-radius:32px;padding:70px 64px 56px;
+  box-shadow:0 26px 70px rgba(0,0,0,.45);text-align:left}
+.depo .aspas{font-family:var(--font-display);font-weight:900;font-size:150px;line-height:.5;color:var(--sun);display:block}
+.depo .texto{font-size:40px;line-height:1.42;font-weight:600;margin-top:18px}
+.depo .autor{margin-top:38px;display:flex;align-items:center;gap:18px;font-size:30px;font-weight:800}
+.depo .autor .viagem{font-weight:600;color:var(--teal-dark)}
+.depo .estrelas{color:var(--sun);font-size:34px;letter-spacing:6px;margin-top:8px}
+
+/* assinatura (post de autoridade / foto da Josi) */
+.assinatura{margin-top:44px;border-left:6px solid var(--sun);padding-left:28px}
+.assinatura .nome{font-family:var(--font-display);font-weight:900;font-size:58px;line-height:1}
+.assinatura .papel{font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);margin-top:12px}
+
+/* preço opcional (promoção) */
+.preco{margin-top:38px}
+.preco .pre{display:block;font-size:26px;font-weight:700;opacity:.92;margin-bottom:12px}
+.preco .price-chip{font-size:62px}
+.preco .price-chip small{font-size:28px;opacity:.72}
+.preco .obs{display:block;font-size:24px;font-weight:600;opacity:.9;margin-top:14px}
+
+.cta-wpp{font-size:32px;margin-top:44px;align-self:flex-start}
+.anc-centro .cta-wpp{align-self:center}
+.seta{font-size:30px;font-weight:800;letter-spacing:2px;margin-top:40px;color:var(--sun)}
+
+/* marca + contador do carrossel */
+.marca{position:absolute;top:var(--pad-topo);left:var(--pad);z-index:4;width:112px;height:112px;border-radius:50%;
+  border:3px solid var(--sun);overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(0,0,0,.45)}
+.marca img{width:100%;height:100%;object-fit:cover}
+.anc-topo .conteudo{padding-top:calc(var(--pad-topo) + 150px)}
+.contador{position:absolute;top:var(--pad-topo);right:var(--pad);z-index:4;
+  background:rgba(251,250,246,.16);border:2px solid rgba(251,250,246,.4);color:var(--paper);
+  font-size:26px;font-weight:800;letter-spacing:2px;border-radius:999px;padding:12px 26px;backdrop-filter:blur(6px)}
