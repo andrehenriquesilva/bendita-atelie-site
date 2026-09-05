@@ -85,3 +85,30 @@ html,body{background:#07151a;min-height:100vh;display:flex;justify-content:cente
 .contador{position:absolute;top:var(--pad-topo);right:var(--pad);z-index:4;
   background:rgba(251,250,246,.16);border:2px solid rgba(251,250,246,.4);color:var(--paper);
   font-size:26px;font-weight:800;letter-spacing:2px;border-radius:999px;padding:12px 26px;backdrop-filter:blur(6px)}
+
+/* ============================================================
+   CADA FORMATO E UMA ARTE, NAO UMA ADAPTACAO (regra do Andre, 05/09/2026).
+   Estas sao as regras de base. Peca que precisar de composicao propria por
+   formato (foto em faixa no stories, duas colunas no quadrado) sobrescreve
+   aqui embaixo, no estilo da propria peca — ver a B-033 como referencia.
+   ============================================================ */
+
+/* STORIES 9:16 — sobra altura: tipografia cresce e a base fica LIVRE,
+   porque a interface do app cobre os ultimos ~250px da tela. */
+.f-9x16 .titulo{font-size:118px}
+.f-9x16 .sub{font-size:44px}
+.f-9x16 .itens li{font-size:42px}
+.f-9x16 .itens .ck{width:52px;height:52px;font-size:30px}
+.f-9x16 .cta-wpp{font-size:38px}
+.f-9x16 .marca{width:128px;height:128px}
+
+/* QUADRADO 1:1 — falta altura: tudo encolhe e a peca fica com MENOS itens.
+   Espremer o que cabia no 4:5 e o que faz o quadrado parecer sobra do feed. */
+.f-1x1 .titulo{font-size:76px}
+.f-1x1 .sub{font-size:30px;margin-top:20px}
+.f-1x1 .itens{margin-top:26px;gap:16px}
+.f-1x1 .itens li{font-size:29px}
+.f-1x1 .itens li:nth-child(n+4){display:none}   /* no quadrado, no maximo 3 itens */
+.f-1x1 .itens .ck{width:36px;height:36px;font-size:22px}
+.f-1x1 .cta-wpp{font-size:26px;margin-top:30px}
+.f-1x1 .marca{width:88px;height:88px}
